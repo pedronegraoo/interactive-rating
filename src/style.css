@@ -105,12 +105,6 @@ img {
   color: hsl(228, 45%, 44%);
 }
 
-/* esse código abaixo foi para tentar colocar uma borda "permanente"
- no item clicado */
-#destaque {
-  border: none;
-}
-
-#destaque.active {
+.selecionado {
   border: 2px solid hsl(0, 0%, 100%);
 }
