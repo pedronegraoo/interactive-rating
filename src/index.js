@@ -1,20 +1,19 @@
 const btnSubmit = document.querySelector(".btn-submit");
-const btnAll = document.querySelector(".btn-all");
+const btnAll = document.querySelectorAll(".btn");
 
-//esse código abaixo foi para tentar colocar uma borda "permanente" no item clicado
-// const btn = document.getElementById("destaque");
+btnAll.forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const botaoSelecionado = document.querySelector(".btn.selecionado");
+    if (botaoSelecionado) {
+      botaoSelecionado.classList.remove("selecionado");
+    }
 
-// btnAll.addEventListener("click", (e) => {
-//   btn.classList.toggle("active");
-//   let armazenar = e.target.id;
-//   console.log(e);
-//   btnClicado(armazenar);
-// });
+    botao.classList.add("selecionado");
+  });
+});
 
 function btnClicado(event) {
   let booleano = event;
-
-  console.log(booleano);
 
   if (
     booleano === "1" ||
@@ -28,7 +27,7 @@ function btnClicado(event) {
         Swal.fire({
           titleText: `Thank you!
           You select ${booleano} out of 5`,
-          imageUrl: "../images/illustration-thank-you.svg",
+          icon: "success",
           imageWidth: 200,
           imageHeight: 100,
           text: "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!",
