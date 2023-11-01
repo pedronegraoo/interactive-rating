@@ -28,6 +28,8 @@ function btnClicado(event) {
           titleText: `Thank you!
           You select ${booleano} out of 5`,
           icon: "success",
+          background: "hsl(213, 19%, 18%)",
+          color: "hsl(0, 0%, 100%)",
           imageWidth: 200,
           imageHeight: 100,
           text: "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!",
